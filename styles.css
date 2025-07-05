@@ -311,7 +311,27 @@ td .status{
         }
          .main-content header{
             width: calc(100% - 70px);
-            }    
+            } 
+            .sidebar:hover{
+                width: 345px;
+                z-index: 200;
+                }
+               .sidebar:hover
+                .sidebar-brand, .sidebar li:hover {
+                padding-left: 1rem;
+                text-align: center;
+             }
+             .sidebar:hover li a {
+                padding-left: 1rem;
+             }
+             .sidebar li a span {
+                padding-right: 0rem;
+             }
+              .sidebar:hover .sidebar-brand h2 span:last-child,
+             .sidebar:hover  li a span:last-child{
+                    display: inline;
+                
+             }   
 
 }
 @media only screen and (max-width: 960px){
@@ -329,7 +349,60 @@ td .status{
     .recent-grid{
         grid-template-columns:100% ;
     }
-    .search-wrapper{
-        display: none;
+    .sidebar{
+        left: -100% !important;
     }
+    .search-wrapper{
+        display: none
+        
+        ;
+    }
+    header h2{
+        display: flex;
+        align-items: center;
+    }
+    header h2 label{
+        display: inline-block;
+        text-align: center;
+        background:var(--main-color) ;
+        padding-right: 0rem;
+        margin-right: 1rem;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+
+    }
+    header h2 span{
+       text-align: center;
+       padding-right:0rem ;
+    }
+    header h2{
+        font-size: 1rem;
+    }
+    .main-content{
+        width: 100%;
+        margin-left: 0rem;
+    }
+    .header{
+        width: 100% !important;
+        left: 0 !important;
+    }
+    #nav-toggle:checked + .sidebar{
+        left: 0 !important;
+        z-index: 100;
+        width: 345px;
+    }
+    .sidebar:hover
+    .sidebar-brand, .sidebar li:hover {
+    padding-left: 1rem;
+    text-align: center;
+ }
+ #nav-toggle:checked + .sidebar:hover li a {
+    padding-left: 1rem;
+ }
+ 
 }
